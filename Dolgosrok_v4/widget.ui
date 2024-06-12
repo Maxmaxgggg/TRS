@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Вариант 4</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Dolgosrok.qrc">
+    <normaloff>:/new/prefix1/D:/icons/icons/calculator.png</normaloff>:/new/prefix1/D:/icons/icons/calculator.png</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="in_FileLBL">
+         <property name="text">
+          <string>Выберите исходный файл</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="in_FileLED">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="orLBL">
+         <property name="text">
+          <string>ИЛИ</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="mesLBL">
+         <property name="text">
+          <string>Введите сообщение</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="mesLED"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="outFileLBL">
+         <property name="text">
+          <string>Выберите выходной файл</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="outFileLED">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QPushButton" name="outFilePBN">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="Dolgosrok.qrc">
+           <normaloff>:/new/prefix1/D:/icons/icons/folder-horizontal-open.png</normaloff>:/new/prefix1/D:/icons/icons/folder-horizontal-open.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="in_FilePBN">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="Dolgosrok.qrc">
+           <normaloff>:/new/prefix1/D:/icons/icons/folder-horizontal-open.png</normaloff>:/new/prefix1/D:/icons/icons/folder-horizontal-open.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="progressPBN">
+       <property name="text">
+        <string>Обработать</string>
+       </property>
+       <property name="icon">
+        <iconset resource="Dolgosrok.qrc">
+         <normaloff>:/new/prefix1/D:/icons/icons/control.png</normaloff>:/new/prefix1/D:/icons/icons/control.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="logPTE">
+       <property name="styleSheet">
+        <string notr="true">font: 700 9pt &quot;Courier New&quot;;</string>
+       </property>
+       <property name="lineWrapMode">
+        <enum>QPlainTextEdit::NoWrap</enum>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="Dolgosrok.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>in_FilePBN</sender>
+   <signal>clicked()</signal>
+   <receiver>Widget</receiver>
+   <slot>fileSelectSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>770</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>outFilePBN</sender>
+   <signal>clicked()</signal>
+   <receiver>Widget</receiver>
+   <slot>fileSelectSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>770</x>
+     <y>123</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>fileSelectSlot()</slot>
+ </slots>
+</ui>
