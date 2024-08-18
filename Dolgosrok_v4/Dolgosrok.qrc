@@ -1,7 +1,7 @@
 <RCC>
     <qresource prefix="/new/prefix1">
-        <file>D:/icons/icons/folder-horizontal-open.png</file>
-        <file>D:/icons/icons/control.png</file>
-        <file>D:/icons/icons/calculator.png</file>
+        <file>icons/folder-horizontal-open.png</file>
+        <file>icons/calculator-gray.png</file>
+        <file>icons/control.png</file>
     </qresource>
 </RCC>

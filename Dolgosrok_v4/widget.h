@@ -41,7 +41,7 @@ private:
     const float     CARRIER_AMP = 3000;
     const int       S_SIZE      = 1102;  // Floor(CARRIER_FRQ*PACK_DUR)
     const float     PACK_DUR    = 0.025;
-    const int       BUF_SIZE    = 1024*1024;
+    const int       BUF_SIZE    = 1024*1024; //выходные значения(набор амплитуд) записались в массив такого размера
 
 private slots:
 
@@ -67,8 +67,8 @@ private:
 
     void                    addSymbol( int c );
 
-    Result                  rmNonASCII(const QString& input);
+    Result                  rmNonASCII( const QString& input );
 
-    QVector<int>            cvrtToBit(const QString& input);
+    QVector<int>            cvrtToBit( const QString& input );
 };
 #endif // WIDGET_H
